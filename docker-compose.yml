@@ -1,0 +1,14 @@
+services:
+  app:
+    restart: on-failure
+    build: ./app
+    hostname: app
+    ports:
+      - "3000:8080"
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - app
