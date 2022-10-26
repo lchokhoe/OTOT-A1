@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:latest
 
 # Create app directory
 WORKDIR "C:/Users/LChokHoe/Desktop/Uni Storage/Modules/Y3S1/CS3219/OTOT A1/app"
@@ -14,4 +14,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
